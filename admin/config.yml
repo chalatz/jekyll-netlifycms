@@ -6,5 +6,26 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
+    reate: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { name: Title }
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'post'
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string'
+        }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime'
+        }
+      - { label: 'Body',
+          name: 'body',
+          widget: 'markdown'
+        }
