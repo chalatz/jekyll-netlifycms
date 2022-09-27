@@ -31,6 +31,15 @@ collections:
           name: 'body',
           widget: 'markdown'
         }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
+        }
   - name: 'fr_blog'
     label: 'FR Blog'
     folder: '_posts/fr'
@@ -58,6 +67,15 @@ collections:
       - { label: 'Body',
           name: 'body',
           widget: 'markdown'
+        }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
         }
   - name: 'authors'
     label: 'Authors'
