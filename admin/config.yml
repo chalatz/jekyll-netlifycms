@@ -3,9 +3,37 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+  - name: 'en_blog'
+    label: 'EN Blog'
+    folder: '_posts/en'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'post'
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string'
+        }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime'
+        }
+      - { label: 'Body',
+          name: 'body',
+          widget: 'markdown'
+        }
+  - name: 'fr_blog'
+    label: 'FR Blog'
+    folder: '_posts/fr'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
