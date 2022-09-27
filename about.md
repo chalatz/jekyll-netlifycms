@@ -1,7 +1,16 @@
 ---
-layout: page
 title: About
+layout: page
 permalink: /about/
+testimonials:
+  - quote: Everything is awesome!
+    author:
+      name: Emmet
+      avatar: /assets/uploads/img.jpg
+  - quote: Everything is great!
+    author:
+      name: Chris
+      avatar: /assets/uploads/img.jpg
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
