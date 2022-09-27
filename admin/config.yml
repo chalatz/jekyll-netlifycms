@@ -101,6 +101,18 @@ collections:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: '{{fields.quote}} - {{fields.author.name}}'
+            fields:
+              - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+              - label: Author
+                name: author
+                widget: object
+                fields:
+                  - {label: Name, name: name, widget: string, default: "Emmet"}
+                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
   - name: 'data'
     label: 'Data'
     editor:
